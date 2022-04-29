@@ -1,0 +1,102 @@
+{% extends 'wrapper/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="columns">
+      <div class="column">
+        <form @submit.prevent="FormRegister">
+          <!-- 
+                        ||||||||||||||||||||||||||||||||||||||||||||||||
+                        TITLE FORM
+                        ||||||||||||||||||||||||||||||||||||||||||||||||
+                    -->
+
+          <h1 class="subtitle">
+            Sinovni boshlashdan avval quyidagi formani to’ldiring.
+          </h1>
+          <h3 class="smalltitle mt-3">
+            Ma’lumotlaringiz 3-shaxslar qo’liga tushmasligi ta’minlanadi.
+          </h3>
+
+          <!-- 
+                        ||||||||||||||||||||||||||||||||||||||||||||||||
+                        FIELDS
+                        ||||||||||||||||||||||||||||||||||||||||||||||||
+                     -->
+
+          <div class="field mt-5">
+            <label>
+              Ism va Familiya
+            </label>
+            <p class="control has-icons-left">
+              <input
+                class="input"
+                type="text"
+                placeholder="Abdullo Abdullayev"
+                v-model="name"
+              />
+              <span class="icon is-small is-left">
+                <i class="fa-thin fa-user"></i>
+              </span>
+            </p>
+          </div>
+
+          <div class="field mt-5">
+            <label>
+              Telefon*
+            </label>
+            <p class="control has-icons-left">
+              <input
+                class="input"
+                type="number"
+                placeholder="+998"
+                v-model="phone"
+              />
+              <span class="icon is-small is-left">
+                <i class="fa-thin fa-mobile-screen-button"></i>
+              </span>
+            </p>
+          </div>
+
+          <div class="field mt-5">
+            <label>
+              Yosh*
+            </label>
+            <p class="control">
+              <input
+                class="input"
+                type="number"
+                placeholder="9-30"
+                v-model="age"
+              />
+            </p>
+          </div>
+
+          <div class="field mt-5">
+            <p class="control mt-3">
+              <input class="radio" type="radio" placeholder="" />
+              <label>
+                Qonun qoidalarga roziman
+              </label>
+            </p>
+          </div>
+
+          <div class="field mt-5">
+            <div class="control">
+              <button
+                class="button is-bg-orange is-fullwidth has-text-light is-light"
+              >
+                Sinovni boshlash
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="column">
+        <img src="../assets/images/FORM_IMAGE.png" alt="" />
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
