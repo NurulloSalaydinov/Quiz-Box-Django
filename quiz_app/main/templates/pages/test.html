@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robocode | Sinov</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="icon" href="../img/favicon.svg">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="/" class="nav_logo">
+                <img src="../img/LOGO.png" alt="">
+                <img src="../img/favicon.svg" alt="" class="phone_logo">
+            </a>
+
+            <div class="nav_buttons test_nav">
+                <div class="timer">
+                    <img src="../img/timer.png" alt="timer">
+                    <span class="timer_text">15:00</span>
+                </div>
+                <a href="./complete.html" class="btn complete_test">Yakunlash</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="test">
+        <div class="container">
+            <h1 class="test_title">Savol 1/15</h1>
+            <h3 class="test_subtitle">Siz qanchalik mayda ishlarga sabrlisiz ?</h3>
+            <div class="test_questions">
+                <div class="variant">
+                    <img src="../img/happy.png" alt="">
+                    <span class="variant_text">Normalniy chideman</span>
+                </div>
+                <div class="variant">
+                    <img src="../img/happy.png" alt="">
+                    <span class="variant_text">Sabr yetmedi aka ko’p o’tiromiman menga natijasi tez chiqadigan ishlar yoqadi.</span>
+                </div>
+                <div class="variant">
+                    <img src="../img/happy.png" alt="">
+                    <span class="variant_text">Chideman kaneshna nima qib bosayam qilishga harakat qilaman ishlarni.</span>
+                </div>
+                <div class="variant">
+                    <img src="../img/happy.png" alt="">
+                    <span class="variant_text">Ancheyla sabr yo’q</span>
+                </div>
+            </div>
+            <a href="#" class="btn next_question">Keyingi savol</a>
+        </div>
+    </section>
+
+    <script>
+        const variants = document.querySelectorAll('.variant');
+        for (let i = 0; i < variants.length; i++) {
+            variants[i].addEventListener('click', function(){
+                this.classList.toggle('active');
+            });
+        }
+    </script>
+
+</body>
+</html>

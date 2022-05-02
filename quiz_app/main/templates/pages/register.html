@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robocode | Forma</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="icon" href="../img/favicon.svg">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="/" class="nav_logo">
+                <img src="../img/LOGO.png" alt="">
+                <img src="../img/favicon.svg" alt="" class="phone_logo">
+            </a>
+
+            <div class="nav_buttons">
+                <a href="#" class="btn choose_job_btn">Kasb tanlash</a>
+                <a href="#" class="btn all_test_btn">Umumiy test</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="complete">
+        <div class="container">
+            <div class="complete_content">
+                <h1 class="reg_title">Sinovni boshlashdan avval quyidagi formani to’ldiring.</h1>
+                <h3 class="reg_subtitle">Ma’lumotlaringiz 3-shaxslar qo’liga tushmasligi ta’minlanadi.</h3>
+                <form action="#" class="application">
+                    <fieldset class="fieldset">
+                        <label for="name&surname" class="label">Ism va Familya</label>
+                        <input type="text" class="input" name="name&surname" placeholder="Abdulloh Abdullayev">
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <label for="phone" class="label">Telefon *</label>
+                        <input type="text" class="input" name="phone" placeholder="+998" required>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <label for="text" class="label">Yosh *</label>
+                        <input type="text" class="input" name="age" placeholder="9-30" required>
+                    </fieldset>
+                    <button type="submit" class="btn contact_btn">Sinovni boshlash</button>
+                </form>
+            </div>
+            <img src="../img/FORM_IMAGE.png" alt="" class="reg_img">
+        </div>
+    </section>
+
+    <modal class="modal header_modal">
+        <div class="modal_content">
+            <h3 class="modal_title">Sinov qanday usulda bo’ladi ?</h3>
+            <ul class="modal_list">
+            <li>Sinov ~5 daqiqa davom etadi va 15 ta savoldan iborat bo’ladi.</li>
+            <li>Savollarga to’g’ri javoblarni belgilang.</li>
+            <li>Test oxirida natijangiz ko’rsatiladi.</li>
+            <li>Natijangiz avtomatik tarzda bizda ko’rinadi.</li>
+            <li>Sizga qaysi kasb mos kelishini bilib oling.</li>
+            </ul>
+            <a href="./test.html" class="btn modal_btn">Sinovni boshlash</a>
+        </div>
+        <img src="../img/times.png" alt="" class="modal_close">
+    </modal>
+
+    <script src="../js/register.js"></script>
+
+</body>
+</html>

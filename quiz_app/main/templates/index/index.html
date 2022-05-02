@@ -1,385 +1,240 @@
-{% extends 'wrapper/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="FRONTEND | Suyunbek Saydazimov / BACKEND | Nurullo Salaydinov">
+    <title>Robocode</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/media.css">
+    <link rel="icon" href="/static/img/favicon.svg">
+</head>
+<body>
 
-{% block content %}
+    <nav class="nav">
+        <div class="container">
+            <a href="/static//" class="nav_logo">
+                <img src="/static/img/LOGO.png" alt="">
+                <img src="/static/img/favicon.svg" alt="" class="phone_logo">
+            </a>
 
-<div class="home">
-    <a href="#" class="to-top-navigation">
-      <i class="fa-solid fa-arrow-up"></i>
-    </a>
-
-    <div class="banner section">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-6 has-text-centered-mobile">
-            <h1 class="title mt-5">
-              ROBOCODE IT ACADEMY
-            </h1>
-            <h3 class="subtitle mt-2">
-              Agar siz IT sohasida ishlaganingizda kasbingiz qanday bo’lar edi ?
-            </h3>
-            <p class="smalltitle mt-3">
-              Yagona kirish imtihoni va yo’nalishlar bo’yicha sinov testlaridan
-              o’tib o’z bilim darajangizni tekshirib oling.
-            </p>
-            <button class="banner-button mt-5" @click="openModal">
-              Bilib Olish
-            </button>
-          </div>
-          <div class="column is-6 centered-image">
-              <img
-                src="/static/assets/images/banner_header_image.png"
-                alt=""
-                class="banner_header_image"
-              />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-3 mb-5 middle-content section">
-      <div class="container mb-5">
-
-        <div class="columns mt-5 pt-5 is-flex is-flex-wrap-wrap-reverse">
-          <div class="column is-6 centered-image">
-            <img
-              src="/static/assets/images/image_rocket.png"
-              class="narrow-img"
-              alt=""
-            />
-          </div>
-          <div class="column is-6 has-text-centered-mobile">
-            <h1 class="subtitle mt-5">
-              BILIMLARINGIZNI OSHIRIB BORING!
-            </h1>
-            <p
-              class="smalltitle mt-3"
-            >
-              Ushbu ilova ROBOCODE IT ACADEMY o’quvchilari va boshqa qiziquvchi
-              yoshlar uchun online tarzda o’zlarining bilim darajalarini
-              tekshirib borish imkoniyatini beradi.
-            </p>
-            <p class="smalltitle mt-5">
-              Qolaversa o’quvchilarimiz va ularning ota-onalari imtihon
-              natijalarini ham shu ilova orqali ko’rishlari mumkin bo’ladi.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-5 mb-5 pt-5 pb-5 section">
-      <div class="container">
-        <div class="has-text-centered mt-5 pt-5">
-          <h1
-            class="subtitle mt-5"
-          >
-            KERAKLI SINOVNI TANLANG
-          </h1>
-        </div>
-      </div>
-
-      <div class="container mt-3 mb-5 pb-5 overflow-hidden">
-        <div class="columns mt-5 mb-5 slider-mobile">
-          <div class="column is-4 card-slide is-full-width-mobile">
-            <div class="card is-bg-orange is-border-radius-20 pb-5">
-              <div class="card-image">
-                <figure class="is-flex is-align-items-center is-justify-content-center">
-                  <img src="/static/assets/images/processor.png" alt="Image" />
-                </figure>
-              </div>
-              <div class="has-text-centered card-content" style="padding-bottom: 50px">
-                <h1 class="subtitle is-text-light">Bolalar uchun robototexnika</h1>
-                <p class="is-text-light smalltitle mt-3 pb-3">
-                  12-16 yoshli bolalar uchun Arduino UNO mikrokontrolleri va
-                  dasturlash asoslarini o’rgatuvchi yosh injenerlar kursi kirish
-                  sinovi
-                </p>
-              </div>
-              <div class="start-button">
-                <a href="" class="card-button"
-                  >Boshlash</a
-                >
-              </div>
+            <div class="nav_buttons">
+                <a href="/static/#" class="btn choose_job_btn">Kasb tanlash</a>
+                <a href="/static/#" class="btn all_test_btn">Umumiy test</a>
             </div>
-          </div>
-          <div class="column is-4 card-slide is-full-width-mobile">
-            <div class="card is-bg-orange is-border-radius-20 pb-5">
-              <div class="card-image">
-                <figure class="is-flex is-align-items-center is-justify-content-center">
-                  <img src="/static/assets/images/processor.png" alt="Image" />
-                </figure>
-              </div>
-              <div class="has-text-centered card-content" style="padding-bottom: 50px">
-                <h1 class="subtitle is-text-light">Bolalar uchun robototexnika</h1>
-                <p class="is-text-light smalltitle mt-3 pb-3">
-                  12-16 yoshli bolalar uchun Arduino UNO mikrokontrolleri va
-                  dasturlash asoslarini o’rgatuvchi yosh injenerlar kursi kirish
-                  sinovi
-                </p>
-              </div>
-              <div class="start-button">
-                <a href="" class="card-button"
-                  >Boshlash</a
-                >
-              </div>
+        </div>
+    </nav>
+
+    <header class="header" id="home">
+        <div class="container">
+            <div class="header_content">
+                <h1 class="title header_title">ROBOCODE IT ACADEMY</h1>
+                <h3 class="subtitle header_subtitle">Agar siz IT sohasida ishlaganingizda kasbingiz qanday bo’lar edi ?</h3>
+                <p class="header_text">Yagona kirish imtihoni va yo’nalishlar bo’yicha sinov testlaridan o’tib o’z bilim darajangizni tekshirib oling.</p>
+                <a href="/static/#" class="btn header_btn">Bilib olish</a>
             </div>
-          </div>
-        <div class="prev_btn">
-          <i class="fa-solid fa-chevron-left"></i>
-        </div>
-        <div class="next_btn">
-          <i class="fa-solid fa-chevron-right"></i>
-        </div>
-      </div>
-    </div>
-
-    <div class="latest_results">
-      <div class="container has-text-centered-mobile">
-        <h1
-          class="title is-sifullhd-1-widescreen i3-size-2-desktop is-size-3-tablet is-size-4-touch is-size-5-mobile"
-          data-aos="fade-up-left"
-        >
-          OXIRGI SINOV NATIJALARI
-        </h1>
-      </div>
-
-      <div class="container">
-        <div class="is-flex-wrap-wrap-reverse columns">
-          <div class="column is-overflow-auto">
-            <div
-              class="box mt-5 is-w-300"
-              v-for="table in tables"
-              v-bind:key="table.id"
-            >
-              <table class="table is-fullwidth">
-                <tr>
-                  <td>
-                    <i :class="table.smile"></i>
-                  </td>
-                  <td>
-                    {{ table.name }}
-                  </td>
-                  <td>
-                    {{ table.category }}
-                  </td>
-                  <td>
-                    {{ table.result }}
-                  </td>
-                  <td>
-                    {{ table.percent }}
-                  </td>
-                </tr>
-              </table>
+            <div class="header_img">
+                <img src="/static/img/BANNER_IMAGE.png" alt="">
             </div>
-          </div>
-          <div class="column centered-image">
-            <img
-              src="/static/assets/images/image_exam.png"
-              class="narrow-img-small"
-              alt=""
-            />
-          </div>
         </div>
-      </div>
-    </div>
+    </header>
 
-    <div
-      class="brands mt-5 mb-5 pt-5 pb-5"
-      data-aos="zoom-in"
-      data-aos-easing="ease-out-cubic"
-      data-aos-duration="2000"
-    >
-      <div class="container has-text-centered">
-        <h1 class="title">Bizning Hamkorlarimiz</h1>
-      </div>
-      <div class="container">
-        <div class="columns">
-          <div class="column brand-box">
-            <img src="/static/assets/images/brands/intech.png" alt="" />
-          </div>
-          <div class="column brand-box">
-            <img src="/static/assets/images/brands/uic.png" alt="" />
-          </div>
-          <div class="column brand-box">
-            <img src="/static/assets/images/brands/itpark.png" alt="" />
-          </div>
-          <div class="column brand-box">
-            <img src="/static/assets/images/brands/rework.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="monitor-result section">
-      <div class="container">
-        <div class="columns">
-          <div class="column centered-image">
-            <img src="/static/assets/images/image_mount.png" alt="" />
-          </div>
-          <div class="column">
-            <h1 class="subtitle mt-large">
-              FARZANDINGIZNI NATIJALARI BILAN TANISHING!
-            </h1>
-            <h3 class="smalltitle">
-              <span class="has-text-weight-bold">ROBOCODE IT ACADEMY </span>
-              o’quvchilarning o’zlashtirishi va guruhdoshlariga nisbatan bilim
-              darajasini biz muntazam olinadigan imtihonlarimiz orqali nazorat
-              qiladi.
-            </h3>
-            <h3 class="smalltitle mt-5 pt-3">
-              Endi siz kerakli kursni tanlab undagi oxirgi imtihon natijalaridan
-              o’z farzandingizni natijasini bilib turishingiz mumkin
-            </h3>
-            <button class="banner-button mt-5" @click="openOptionsCourse">
-              Kursni Tanlash
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="contact mt-5 pt-5 mb-5 pb-5">
-      <div class="container">
-
-        <form @submit.prevent="contactForm">
-          <div class="is-flex is-flex-wrap-wrap-reverse columns">
-            <div class="column">
-                      <div class="has-text-left-desktop-only has-text-centered-mobile">
-          <h1
-            class="subtitle has-text-black"
-          >
-            BIROR-BIR NARSAGA <br />
-            TUSHUNMADINGIZMI ?
-          </h1>
-          <h3 class="smalltitle mt-5">
-            U holda bizga savolingizni yozib yuboring.
-          </h3>
-        </div>
-              <div class="field mt-5">
-                <label>
-                  Ism va Familiya
-                </label>
-                <p class="control has-icons-left">
-                  <input
-                    class="input"
-                    type="text"
-                    placeholder="Abdullo Abdullayev"
-                    v-model="name"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fa-thin fa-user"></i>
-                  </span>
-                </p>
-              </div>
-
-              <div class="field mt-5">
-                <label>
-                  Telefon*
-                </label>
-                <p class="control has-icons-left">
-                  <input
-                    class="input"
-                    type="text"
-                    placeholder="+998"
-                    v-model="phone"
-                  />
-                  <span class="icon is-left">
-                    <i class="fa-thin fa-mobile-screen-button"></i>
-                  </span>
-                </p>
-              </div>
-
-              <div class="field mt-5">
-                <label>
-                  Savol matni (maksimum 255 ta belgi)
-                </label>
-                <p class="control">
-                  <textarea
-                    class="textarea"
-                    type="text"
-                    placeholder="Matn"
-                    v-model="msg"
-                  ></textarea>
-                </p>
-              </div>
-
-              <div class="field mt-5">
-                <div class="control">
-                  <button
-                    class="button is-bg-orange is-fullwidth has-text-light is-light"
-                  >
-                    Yuborish
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="column top-minus-5 centered-image">
-              <img src="/static/assets/images/image_contact.png" alt="" />
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="modal" id="home-modal">
-      <div class="modal-background"></div>
-      <div class="modal-content">
-        <div class="box p-5">
-          <div class="modal-closer" @click="closeModal">
-            <i class="fa-solid fa-times"></i>
-          </div>
-          <div class="has-text-centered">
-            <h3 class="subtitle">Sinov qanday usulda boladi ?</h3>
-          </div>
-          <div class="container">
-            <ul class="mt-5">
-              <li>
-                Sinov ~5 daqiqa davom etadi va 15 ta savoldan iborat bo’ladi .
-              </li>
-              <li>
-                Savollarga to’g’ri javoblarni belgilang.
-              </li>
-              <li>
-                Test oxirida natijangiz ko’rsatiladi.
-              </li>
-              <li>
-                Natijangiz avtomatik tarzda bizda ko’rinadi.
-              </li>
-              <li>
-                Sizga qaysi kasb mos kelishini bilib oling.
-              </li>
+    <modal class="modal header_modal">
+        <div class="modal_content">
+            <h3 class="modal_title">Sinov qanday usulda bo’ladi ?</h3>
+            <ul class="modal_list">
+            <li>Sinov ~5 daqiqa davom etadi va 15 ta savoldan iborat bo’ladi.</li>
+            <li>Savollarga to’g’ri javoblarni belgilang.</li>
+            <li>Test oxirida natijangiz ko’rsatiladi.</li>
+            <li>Natijangiz avtomatik tarzda bizda ko’rinadi.</li>
+            <li>Sizga qaysi kasb mos kelishini bilib oling.</li>
             </ul>
-            <div class="has-text-centered">
-              <router-link to="/auth" class="button modal-button"
-                >Sinovni boshlash</router-link
-              >
+            <a href="/static/pages/test.html" class="btn modal_btn">Sinovni boshlash</a>
+        </div>
+        <img src="/static/img/times.png" alt="" class="modal_close">
+    </modal>
+
+    <div class="sections">
+        <section class="knowledge">
+            <div class="container">
+                <div class="knowledge_img">
+                    <img src="/static/img/LEFT_IMAGE_ROCKET.png" alt="">
+                </div>
+                <div class="knowledge_content">
+                    <h3 class="subtitle knowledge_subtitle">BILIMLARINGIZNI OSHIRIB BORING!</h3>
+                    <p class="knowledge_text">Ushbu ilova ROBOCODE IT ACADEMY o’quvchilari va boshqa qiziquvchi yoshlar uchun online tarzda o’zlarining bilim darajalarini tekshirib borish imkoniyatini beradi.</p>
+                    <p class="knowledge_text2">Qolaversa o’quvchilarimiz va  ularning ota-onalari  imtihon natijalarini ham shu ilova orqali ko’rishlari mumkin bo’ladi.</p>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
+        </section>
+
+        <section class="choose_test">
+            <h3 class="subtitle choose_test_subtitle">KERAKLI SINOVNI TANLANG</h3>
+            <div class="container" style="display: flex; align-items: center;justify-content: space-around">
+                <div class="choose_test_card">
+                    <img src="/static/img/processor.png" class="card_img" alt="">
+                    <h5 class="card_title">Bolalar uchun robototexnika</h5>
+                    <p class="card_text">12-16 yoshli bolalar uchun Arduino UNO mikrokontrolleri va dasturlash asoslarini o’rgatuvchi yosh injenerlar kursi kirish sinovi</p>
+                    <a href="/static/pages/register.html" class="btn begin_btn">Boshlash</a>
+                </div>
+                <div class="choose_test_card">
+                    <img src="/static/img/iMac.png" class="card_img" alt="">
+                    <h5 class="card_title">Veb dasturlash Full-Stack</h5>
+                    <p class="card_text">16 yoshdan kattalar uchun veb dasturlash kursi yagona kirish imtihon sinov testi</p>
+                    <a href="/static/pages/register.html" class="btn begin_btn">Boshlash</a>
+                </div>
+                <div class="choose_test_card">
+                    <img src="/static/img/Folder.png" class="card_img" alt="">
+                    <h5 class="card_title">Yagona kirish sinov testi</h5>
+                    <p class="card_text">Ushbu testni topshiring va biz sizga optimal bo’lgan IT yo’nalishini tanlab beramiz</p>
+                    <a href="/static/pages/register.html" class="btn begin_btn">Boshlash</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent_result">
+            <h3 class="subtitle recent_result_subtitle">OXIRGI SINOV NATIJALARI</h3>
+            <div class="container">
+                <div class="recent_result_content">
+                    <table class="recent_result_table">
+                        <tbody>
+                            <tr>
+                                <td><img src="/static/img/Lol.png" alt=""></td>
+                                <td>Abdullo Abullayev</td>
+                                <td>Robototexnika</td>
+                                <td>15/13</td>
+                                <td>79%</td>
+                            </tr>
+                            <tr>
+                                <td><img src="/static/img/Lol.png" alt=""></td>
+                                <td>Javohir Soliyev</td>
+                                <td>Web dasturlash</td>
+                                <td>15/13</td>
+                                <td>70%</td>
+                            </tr>
+                            <tr>
+                                <td><img src="/static/img/happy.png" alt=""></td>
+                                <td>Rahmatjon Umarov</td>
+                                <td>Web dasturlash</td>
+                                <td>15/13</td>
+                                <td>86%</td>
+                            </tr>
+                            <tr>
+                                <td><img src="/static/img/Sad_alt.png" alt=""></td>
+                                <td>Tohirjon Haydarov</td>
+                                <td>Web dasturlash</td>
+                                <td>15/13</td>
+                                <td>66%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="recent_result_img">
+                    <img src="/static/img/RESULTS_EXAM.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="partners">
+            <h3 class="title partners_title">Bizning hamkorlarimiz</h3>
+            <div class="container" style="display: flex; align-items: center;justify-content: space-around">
+                <div class="partners_img"><img src="/static/img/partners1.png" alt=""></div>
+                <div class="partners_img"><img src="/static/img/partners2.png" alt=""></div>
+                <div class="partners_img"><img src="/static/img/partners3.png" alt=""></div>
+                <div class="partners_img"><img src="/static/img/partners4.png" alt=""></div>
+            </div>
+        </section>
+
+        <section class="child_result">
+            <div class="container">
+                <div class="child_result_img">
+                    <img src="/static/img/MOUNTS.png" alt="">
+                </div>
+                <div class="child_result_content">
+                    <h3 class="subtitle child_result_subtitle">FARZANDINGIZNI NATIJALARI BILAN TANISHING!</h3>
+                    <p class="child_result_text">ROBOCODE IT ACADEMY o’quvchilarning o’zlashtirishi va guruhdoshlariga nisbatan bilim darajasini biz muntazam olinadigan imtihonlarimiz orqali nazorat qiladi.</p>
+                    <p class="child_result_text2">Endi siz kerakli kursni tanlab undagi oxirgi imtihon natijalaridan o’z farzandingizni natijasini bilib turishingiz mumkin</p>
+                    <a href="/static/#" class="btn child_result_btn">Kursni tanlash</a>
+                </div>
+            </div>
+            <modal class="modal notification notification1">
+                <div class="modal_content">
+                    <div class="courses_list">
+                        <div class="ntc_box enabled">Bolalar uchun dasturlash LEGO</div>
+                        <div class="ntc_box enabled">Robototexnika ARDUINO</div>
+                        <div class="ntc_box disabled">Dasturlash WEB</div>
+                    </div>
+                </div>
+                <img src="/static/img/close_black.png" alt="" class="modal_close">
+            </modal>
+            <modal class="modal notification notification2">
+                <div class="modal_content">
+                    <div class="courses_list">
+                        <div><a href="/static/pages/test-results.html" class="ntc_var">Group B</a></div>
+                        <div><a href="/static/pages/test-results.html" class="ntc_var">Group A</a></div>
+                        <div><a href="/static/pages/test-results.html" class="ntc_var">Group C</a></div>
+                    </div>
+                </div>
+                <img src="/static/img/close_black.png" alt="" class="modal_close">
+            </modal>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <div class="sendFeedback">
+                    <h3 class="subtitle contact_title">BIROR-BIR NARSAGA TUSHUNMADINGIZMI ?</h3>
+                    <p class="contact_text">U holda bizga savolingizni yozib yuboring.</p>
+                    <form action="#" class="contact_form">
+                        <fieldset class="fieldset">
+                            <label for="name&surname" class="label">Ism va Familya</label>
+                            <input type="text" class="input" name="name&surname" placeholder="Abdulloh Abdullayev">
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <label for="phone" class="label">Telefon *</label>
+                            <input type="text" class="input" name="phone" placeholder="+998" required>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <label for="text" class="label">Savol matni (maksimum 255 ta belgi)</label>
+                            <textarea type="text" class="input textarea" name="text" placeholder="Matn..."></textarea>
+                        </fieldset>
+                        <button type="submit" class="btn contact_btn">Yuborish</button>
+                    </form>
+                </div>
+                <img src="/static/img/CONTACT_IMAGE.png" alt="" class="contact_img">
+            </div>
+            <modal class="modal notification notification3">
+                <div class="modal_content">
+                    <h3 class="notification_title">Qabul qilindi!</h3>
+                    <p class="notification_text">Tez orada siz bilan ko’rsatilgan raqam orqali bog’lanishadi. <br> Agar uzrli sabablarga ko’ra siz bilan bog’lanishmasa <a href="/static/#">mana bu</a> manzilga telegram orqali yozing.</p>
+                </div>
+                <img src="/static/img/close_black.png" alt="" class="modal_close">
+            </modal>
+        </section>
     </div>
 
-    <div class="modal" id="category-modal">
-      <div class="modal-background"></div>
-      <div class="modal-content">
-        <div class="box p-5 is-bg-orange" @click="closeModal">
-          <div class="modal-closer is-bg-dark">
-            <i class="fa-solid fa-times"></i>
-          </div>
-          <div class="container p-5 m-3">
-            <router-link to="/" class="button is-fullwidth mt-3 is-light-100"
-              >Bolalar uchun dasturlash LEGO</router-link
-            >
-            <router-link to="/" class="button is-fullwidth mt-3 is-light-100"
-              >Robototexnika ARDUINO</router-link
-            >
-            <router-link to="/" class="button is-fullwidth mt-3 is-light-100"
-              >Dasturlash WEB</router-link
-            >
-          </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_content">
+                <img src="/static/img/LOGO.png" alt="">
+                <p class="footer_text">O’quvchilar va qiziquvchilarni bilim darajalarini sinash <br> va yagona kirish imtihonini olish hamda kasb tanlashga ko’maklashuvchi  ilova.</p>
+                <p class="footer_text2">ROBOCODE IT ACADEMY 2022 yil</p>
+            </div>
+            <p class="footer_phone">+998 99 899 90 05</p>
+            <div class="social_media">
+                <a href="/static/#"><img src="/static/img/social1.png" alt=""></a>
+                <a href="/static/#"><img src="/static/img/social2.png" alt=""></a>
+                <a href="/static/#"><img src="/static/img/social3.png" alt=""></a>
+                <a href="/static/#"><img src="/static/img/social4.png" alt=""></a>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </footer>
 
-{% endblock %}
+    <div class="scroll_up">
+        <a href="/static/#home" class="scroll_up_btn"><img src="/static/img/scroll_up.png" alt=""></a>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+
+</body>
+</html>
